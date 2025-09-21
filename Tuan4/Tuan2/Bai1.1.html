@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Example Cafe Menu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background: #fff;
+        }
+
+        .menu-container {
+            border: 1px solid red;
+            width: 60%;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        h1 {
+            color: red;
+            text-align: center;
+            text-shadow: 2px 2px 4px #ccc;
+            font-style: italic;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: blue;
+            font-size: 14px;
+        }
+
+        h2 {
+            background-color: #ffcc00;
+            font-size: 22px;
+            font-weight: bold;
+            color: #800000;
+            padding-left: 5px;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        a.back {
+            color: red;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container menu-container">
+        <h1>EXAMPLE CAFE MENU</h1>
+        <nav class="text-center mb-3">
+            <a href="#starter">Starter</a>
+            <a href="#main">Main Courses</a>
+            <a href="#desserts">Desserts</a>
+        </nav>
+
+        <!-- Starter -->
+        <section id="starter" class="mb-4">
+            <h2>Starter</h2>
+            <ul>
+                <li>Chesnut and Mushroom Goujons <span style="color:red">(v)</span></li>
+                <li>Goat Cheese <span style="color:red">(v)</span></li>
+                <li><b>HONEY SOY CHICKEN KEBABS</b> <span style="color:red">(v)</span></li>
+                <li>Seafood Salad <span style="color:red">(v)</span></li>
+            </ul>
+            <a href="#top" class="back">Back to Top</a>
+        </section>
+
+        <!-- Desserts -->
+        <section id="desserts" class="mb-4">
+            <h2>Desserts</h2>
+            <ul>
+                <li>Lemon Sorbet <span style="color:red">(v)</span></li>
+                <li>Chocolate Mud Pie <span style="color:red">(v)</span></li>
+                <li>Pecan Pie <span style="color:red">(v)</span></li>
+                <li>Selection of fine Cheeses from Around the World <span style="color:red">(v)</span></li>
+            </ul>
+            <a href="#top" class="back">Back to Top</a>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autumn Travel Company</title>
+    <style>
+        :root {
+            --brown: #AC4B16;
+            --text: #733200;
+            --accent: #807E03;
+            --gold: #AE983E;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            background: #fff
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto
+        }
+
+        /* Header */
+        header .title {
+            background: var(--brown);
+            color: #7F8000;
+            padding: 18px 16px;
+            text-shadow: -2px -2px 6px #fff;
+        }
+
+        header .title h1 {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px
+        }
+
+        .nav {
+            border-top: 1px solid #000;
+            border-bottom: 6px double #999;
+            padding: 8px 12px;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: bold;
+            padding: 4px 0
+        }
+
+        .nav a:hover {
+            opacity: .85
+        }
+
+        /* ===== Banner lá: headline.png + line.png ===== */
+        .header-banner {
+            height: 120px;
+            /* chỉnh cao thấp tại đây */
+            background: url("../../image/Tuan4/Tuan3/headline.png") center/cover no-repeat;
+            position: relative;
+            margin: 0 12px;
+        }
+
+        .header-banner::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -6px;
+            /* kéo sát mép dưới */
+            height: 58px;
+            /* chiều cao của line.png */
+            background: url("../../image/Tuan4/Tuan3/line.png") repeat-x left bottom / auto 58px;
+            pointer-events: none;
+        }
+
+        /* Layout */
+        .main {
+            display: flex;
+            gap: 24px;
+            padding: 20px 12px 40px
+        }
+
+        .left {
+            flex: 2;
+            color: #AC7400
+        }
+
+        .right {
+            flex: 1;
+            border-left: 1px solid #bbb;
+            padding-left: 20px
+        }
+
+        .left h1 {
+            font-size: 28px;
+            margin-bottom: 10px
+        }
+
+        .left p {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: bold;
+            line-height: 1.5;
+            margin: 12px 0 18px;
+            padding: 0 16px
+        }
+
+        /* Form */
+        .form label {
+            display: block;
+            font-size: 14px;
+            color: #444;
+            margin: 12px 0 4px
+        }
+
+        .form input {
+            width: 100%;
+            padding: 10px 6px;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            font-size: 16px
+        }
+
+        .form button {
+            margin-top: 18px;
+            padding: 8px 14px;
+            background: var(--accent);
+            color: #fff;
+            border: 0;
+            cursor: pointer
+        }
+
+        .form button:hover {
+            filter: brightness(.95)
+        }
+
+        /* Right column */
+        .card {
+            background: #fff7ea;
+            border-radius: 16px 16px 0 0;
+            padding: 16px;
+            margin-bottom: 16px
+        }
+
+        .card h2,
+        .more h2 {
+            color: var(--text);
+            font-size: 18px;
+            margin-bottom: 10px
+        }
+
+        .card ul {
+            margin-left: 18px;
+            color: var(--brown);
+            line-height: 1.7
+        }
+
+        .more {
+            color: #666;
+            text-align: justify
+        }
+
+        .more img {
+            float: left;
+            width: 110px;
+            margin: 6px 12px 6px 0;
+            border: 1px solid #000;
+            padding: 8px;
+            background: #fff
+        }
+
+        /* Footer band & footer text */
+        .footer-band {
+            height: 64px;
+            background: url("../../image/Tuan4/Tuan3/footer.png") repeat-x left top/100px
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 8px;
+            font-size: 14px;
+            color: #333
+        }
+
+        /* Responsive */
+        @media (max-width:768px) {
+            .main {
+                flex-direction: column
+            }
+
+            .right {
+                border-left: 0;
+                padding-left: 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <div class="title">
+            <h1>AUTUMN TRAVEL COMPANY</h1>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Order</a></li>
+            </ul>
+        </nav>
+
+        <!-- banner lá tổng hợp headline.png + line.png -->
+        <div class="header-banner"></div>
+    </header>
+
+    <main class="container main">
+        <!-- Left -->
+        <section class="left">
+            <h1>Sign up for membership benefits</h1>
+            <p>
+                Our philisophical are transparency, respect, formality and responsibility.
+                Our stimulus is your enthusiasm. Our motto is your satisfation.
+            </p>
+
+            <form class="form" action="#">
+                <label>Username</label>
+                <input type="text" placeholder="Username">
+                <label>E-mail</label>
+                <input type="text" placeholder="E-mail">
+                <label>Password</label>
+                <input type="password" placeholder="Password">
+                <label>Retype password</label>
+                <input type="password" placeholder="Retype password">
+                <button type="submit">SIGN ME UP</button>
+            </form>
+        </section>
+
+        <!-- Right -->
+        <aside class="right">
+            <div class="card">
+                <h2>Links</h2>
+                <ul>
+                    <li>Make your Own Tour</li>
+                    <li>Maldives Tours</li>
+                    <li>Nature &amp; Adventure</li>
+                    <li>Europe Tours</li>
+                    <li>Rusia Tours</li>
+                </ul>
+            </div>
+
+            <div class="more">
+                <h2>More Info</h2>
+                <img src="../../image/Tuan4/Tuan3/leaf.png" alt="Leaf">
+                <p>
+                    Our purpose is the client who gives to us the opportunities to serve and to make known the reality
+                    around the world.
+                </p>
+            </div>
+        </aside>
+    </main>
+
+    <!-- dải footer như đề bài cũ -->
+    <div class="footer-band"></div>
+    <footer class="container">© 2017 Software Engineering Department | Test Date: 16 Sept 2017</footer>
+</body>
+
+</html>
